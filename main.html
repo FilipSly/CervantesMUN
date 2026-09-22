@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervantes MUN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Oswald, sans-serif;
+
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8vh;
+            background-color: #136D80;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+
+        .content {
+            padding-top: 10vh;
+            height: 92vh;
+            background-color: #EBFFFF;
+            text-align: center;
+            background-image: url("./logotr.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80vh auto;
+            @media (orientation: landscape) {
+                background-size: 90vh auto;
+            }
+        }
+        .content p {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .content h1 {
+            font-size: 48px;
+            margin: 0px 0;
+        }
+        .navbar img {
+            height: 50px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="./logo.png" alt="Logo">
+        <a href="./main.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+
+    <div class="content">
+        <br><br>
+        <p>Welcome to</p>
+        <h1>Cervantes MUN</h1>
+        <p>16-18 October 2026</p>
+    </div>
+
+</body>
+</html>
