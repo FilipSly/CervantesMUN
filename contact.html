@@ -43,23 +43,36 @@
             background-color: rgb(201, 218, 218);
             height: 5vh;
             color: black;
-            text-align:right;
+            text-align: right;
 
             @media (orientation: portrait) {
                 padding-right: 3vh;
             }
         }
+
         .page {
+            display: grid;
+            grid-template-columns: 1fr;
             background-color: #186574;
             height: auto;
+            gap: 1vh;
+
+            @media (orientation: landscape) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+
         .content {
-            padding-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10vh;
+            padding-top: 3vh;
             height: 100vh;
             width: auto;
             background-color: #EBFFFF;
             text-align: center;
-            background-image: url("./images/logotr.png");
+            background-image: url("./images/logohitr.png");
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 80vh auto;
@@ -68,31 +81,96 @@
                 background-size: 90vh auto;
             }
         }
+        
+        .box {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80vh;
+            height: 5vh;
+            max-height: 50px;
+            max-width: 350px;
+            border-radius: 15px;
+            background-color: chocolate;
+            text-align: center;
+        }
+        .box2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            max-width: 600px;
+            border-radius: 15px;
+            text-align: center;
+            object-fit:contain;
+            margin-bottom: 5vh;
+        }
+        .content2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            align-items: center;
+            gap: 0;
+            padding-top: 3vh;
+            height: 100vh;
+            width: auto;
+            background-color: #EBFFFF;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80vh auto;
 
+            @media (orientation: landscape) {
+                background-size: 90vh auto;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
         .content p {
             font-size: 24px;
             margin: 0 0;
         }
 
         .content h1 {
-            font-size: 70px;
+            font-size: 50px;
             margin: 0px 0;
-            font-weight:800;
-            font-family: "Jim Nightshade", cursive;
+            font-weight: 800;
+            font-family: "Oswald", sans-serif;
             margin-bottom: -5px;
-            margin-top: -20px;
-            @media(orientation:portrait){
-                font-size:60px;
+            margin-top: 0px;
+
+            @media(orientation:portrait) {
+                font-size: 60px;
             }
         }
+        .content2 h1 {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 50px;
+            margin: 0px 0;
+            font-weight: 800;
+            font-family: "Oswald", sans-serif;
+            margin-bottom: -5px;
 
+            @media(orientation:portrait) {
+                font-size: 60px;
+            }
+        }
         .navbar img {
             height: 100px;
             margin-right: 25px;
             margin-top: 30px;
         }
+
         .navbar a {
-            font-size:20px;
+            font-size: 20px;
+        }
+        
+        .box2 img {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
 </head>
@@ -100,7 +178,7 @@
 <body>
 
     <div class="navbar">
-        <img src="./images/logo.png" alt="Logo">
+        <img src="./images/logohi.png" alt="Logo">
         <a href="./main.html">Home</a>
         <a href="./about.html">About</a>
         <a href="./contact.html">Contact</a>
@@ -109,13 +187,22 @@
         <h1>Contact</h1>
     </div>
     <div class="page">
-    <div class="content">
-        <br><br><br>
-        <p>Welcome to</p>
-        <h1>Cervantes MUN</h1>
-        <p>16-18 October 2026</p>
-        <p style="font-size:20px">Save the Date</p>
-    </div>
+        <div class="content">
+            <h1>Contact Us:</h1>
+            <div class="box"><p>Instagram:<span style="color: #EBFFFF;"> @cervantes._mun</span></p></div>
+            <div class="box"><p>Email:<span style="color: #EBFFFF;"> cervantes.mun.buc@gmail.com</span></p></div>
+        </div>
+        <div class="content2">
+            <h1>Or directly:</h1>
+            <div class="box2">
+                <img src="./images/miruna.jpeg" style="border: 5px solid #186574;height: 500px; border-radius: 15px;">
+                <p style="font-size: 24px; margin-top:0px;">+40 775 147 400</p>
+            </div>
+            <div class="box2">
+                <img src="./images/karina.jpeg" style="border: 5px solid #186574;height: 500px; border-radius: 15px;">
+                <p style="font-size: 24px; margin-top:0px;">+40 756 711 373</p>
+            </div>
+        </div>
     </div>
 
 </body>

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cervantes MUN</title>
     <link rel="icon" href="./images/logo.ico">
@@ -43,29 +44,62 @@
             background-color: rgb(201, 218, 218);
             height: 5vh;
             color: black;
-            text-align:right;
+            text-align: right;
 
             @media (orientation: portrait) {
                 padding-right: 3vh;
             }
         }
+
         .page {
+            display: grid;
+            grid-template-columns: 1fr;
             background-color: #186574;
             height: auto;
+
+            @media (orientation: landscape) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+
         .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding-top: 10vh;
             height: 100vh;
             width: auto;
             background-color: #EBFFFF;
             text-align: center;
-            background-image: url("./images/logotr.png");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 80vh auto;
 
             @media (orientation: landscape) {
                 background-size: 90vh auto;
+            }
+            @media (orientation: portrait) {
+                background-image: url("./images/logohitr.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 80vh auto;
+            }
+        }
+
+        .content2 {
+            padding-top: 10vh;
+            height: 100vh;
+            width: auto;
+            background-color: #EBFFFF;
+            text-align: center;
+
+            @media (orientation: landscape) {
+                background-image: url("./images/logohitr.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 80vh auto;
+            }
+
+            @media (orientation: portrait) {
+                display: none;
+
             }
         }
 
@@ -74,15 +108,25 @@
             margin: 0 0;
         }
 
-        .content h1 {
-            font-size: 70px;
+        .box h1 {
+            font-size: 50px;
             margin: 0px 0;
-            font-weight:800;
-            font-family: "Jim Nightshade", cursive;
-            margin-bottom: -5px;
-            margin-top: -20px;
-            @media(orientation:portrait){
-                font-size:60px;
+            font-weight: 800;
+            font-family: "Oswald", sans-serif;
+
+            @media(orientation:portrait) {
+                font-size: 30px;
+            }
+        }
+
+        .box p {
+            font-size: 20px;
+            margin: 0px 0;
+            font-weight: 400;
+            font-family: "Oswald", sans-serif;
+
+            @media(orientation:portrait) {
+                font-size: 15px;
             }
         }
 
@@ -91,8 +135,32 @@
             margin-right: 25px;
             margin-top: 30px;
         }
+
         .navbar a {
-            font-size:20px;
+            font-size: 20px;
+        }
+
+        .box {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80vh;
+            height: auto;
+            max-height: 500px;
+            max-width: 600px;
+            border-radius: 15px;
+            background-color: rgb(255, 235, 216);
+            text-align: center;
+            border: 5px solid #ccb366;
+            margin-bottom: 3vh;
+
+            @media (orientation: portrait) {
+                max-width: 350px;
+            }
+        }
+        .box li {
+            text-align: left;
         }
     </style>
 </head>
@@ -100,7 +168,7 @@
 <body>
 
     <div class="navbar">
-        <img src="./images/logo.png" alt="Logo">
+        <img src="./images/logohi.png" alt="Logo">
         <a href="./main.html">Home</a>
         <a href="./about.html">About</a>
         <a href="./contact.html">Contact</a>
@@ -109,13 +177,34 @@
         <h1>About</h1>
     </div>
     <div class="page">
-    <div class="content">
-        <br><br><br>
-        <p>Welcome to</p>
-        <h1>Cervantes MUN</h1>
-        <p>16-18 October 2026</p>
-        <p style="font-size:20px">Save the Date</p>
-    </div>
+        <div class="content">
+            <div class="box">
+                <h1>Vrei să încerci ceva nou şi să îţi Depăşeşti limitele?</h1>
+            </div>
+            <div class="box">
+                <p> Îți plac dezbaterile, vrei să dai la Drept, te joci Red Dead Redemption 2, ești pasionat de istorie,
+                    diplomație sau drepturile omului? 🎮📜
+                    Dacă ai răspuns DA la oricare dintre întrebări, te așteptăm la Cervantes Model United Nations 2026!
+                </p>
+            </div>
+            <div class="box">
+                <p> Ce este un MUN dacă nu ai mai fost niciodată?
+Este o simulare de 3 zile a comitetelor ONU, unde intri în pielea unui diplomat, judecător sau personaj istoric. Nu ai nevoie de experiență anterioară: este locul perfect în care să îți dezvolți discursul public, gândirea critică și să îți faci prieteni noi într-un mediu super prietenos!</p>
+            </div>
+            <div class="box">
+                <ul>
+                    <li>Disarmament and International Security Committee - Assessing the risks posed by regional militarization in the eastern mediterranean</li>
+                    <li>Social, Humanitarian and Cultural Committee - Addressing Threats to Freedom of the Press Through State Censorship and Political Interference</li>
+                    <li>United Nations Office on Drugs and Crime- Addressing the non-medical use and international trafficking of synthetic opioids and prescription pharmaceutical</li>
+                    <li>United Nations Historical Security Council - The Second Chechen War</li>
+                    <li>Tribunalul Suprem al Republicii Populare Romania - Procesul lui Lucrețiu Pătrășcanu</li>
+                    <li>Historical Council - The Fall of Constantinople</li>
+                    <li>CRISIS - Red Dead Redemption 2: Far From Any Road</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content2">
+        </div>
     </div>
 
 </body>
